@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<h2 class="page-header">Metadata tags for - {{ filename }}</h2>
+
+		<p>
+			<a href="/start">
+				Return to start
+			</a>
+		</p>
+
+    	<p>
+			The metadata tags for the uploaded file ("{{ filename }}") are as follows: 
+		</p>
+
+	{% for file in filenames %}
+		<table class="table table-bordered"> 
+			<thead> 
+				<tr> 
+					<th>Uploaded file</th>
+					<th>{{ filename }}</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				{% for key, value in file %}
+					<tr> 
+						<td>{{ key }}</td>
+						<td>{{ value }}</td> 
+					</tr> 
+				{% endfor %}
+			</tbody> 
+		</table>
+	{% endfor %}
+
+{% endblock %}
+
+
+
+
+

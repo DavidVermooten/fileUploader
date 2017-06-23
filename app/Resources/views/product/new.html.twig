@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>Adding a new product</h1>
+
+	<p>Accepted file formats include:</p>
+	<ul>
+		<li>HTML, XML, PDF, ePub, RTF, TXT, mbox, Java class files and archives</li>
+		<li>Microsoft Office and OpenDocument formats</li>
+		<li>Audio, Image, Video formats</li>
+		<li>Compression and packaging formats</li>
+	</ul>
+
+	{{ form_start(form) }}
+	    {# ... #}
+
+	    {{ form_row(form.brochure) }}
+	{{ form_end(form) }}
+
+{% endblock %}
