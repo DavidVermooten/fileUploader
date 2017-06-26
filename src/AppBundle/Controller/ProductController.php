@@ -14,9 +14,8 @@ class ProductController extends Controller
     /**
      * @Route("/", name="homepage")
      */
- public function indexAction()
+    public function indexAction()
     {
-die('test2');
         // replace this example code with whatever you need
 //        return $this->render('default/index.html.twig', [
 //            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
@@ -76,6 +75,7 @@ die('test2');
         $finder = new Finder();
         
         $directory = $this->getParameter('brochures_directory');
+        var_dump($directory);
         $iterator = $finder->files()->in($directory);
 
         $i=0;
